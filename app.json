@@ -1,0 +1,39 @@
+{
+    "name": "سورس ميوزك ميغو",
+    "description": "سورس ميوزك ميغو",
+    "logo": "https://telegra.ph/file/b0b13433b8595ed385f07.jpg",
+    "keywords": [
+        "Telegram",
+        "MusicPlayer",
+        "Dragon_2022_D",
+        "VideoPlayer"
+    ],
+    "repository": "https://github.com/taher-1/mus",
+    "env": {
+        
+        "token": {
+            "description": "حط توكن بوتك",
+            "required": true
+        },
+        "sudo": {
+            "description": "هنا ضع ايدي حسابك كمطور للبوت بمكنك وضع اكثر من شخص بوضع ايدي المستخدم",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
